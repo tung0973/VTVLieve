@@ -1,0 +1,106 @@
+html, body{
+    margin: 0%;
+    box-sizing: border-box;
+    overflow-x:hidden ;
+    font-family: "Be Vietnam Light", serif;
+}
+
+:root{
+    /* Themes colors */
+
+    --text-gray: #3f4954;
+}
+/* ---------------- global classes -----------------*/
+
+a{
+    text-decoration: none;
+    color: var(--text-gray);
+}
+.flex-row-nav{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+ul{
+    list-style-type: none;
+}
+/* -------x-------- global classes ---------x-------*/
+
+/* ---------------- navbar -----------------*/
+
+.nav-main{
+    background: white;
+    padding: 0.2rem;
+    height: 0;
+    min-height: 10vh;
+    overflow: hidden;
+}
+
+.nav-main .nav-menu {
+    justify-content: space-between;
+}
+
+.nav-main .toggle-collapse-nav{
+    position: absolute;
+    top:0.7%;
+    width: 80%;
+    cursor: pointer;
+    display: none;
+}
+.nav-main .toggle-collapse-nav .toggle-icon{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.7rem 0;
+}
+
+.nav-main .toggle-collapse-nav .toggle-icon i{
+    font-size: 1.4rem;
+    color:var(--text-gray);
+}
+.collapse{
+    height: 20rem;
+}
+.nav-main .nav-items{
+    display: flex;
+    margin: 0;
+}
+
+.nav-main .nav-items .nav-link1{
+    padding: 1.6rem 1rem;
+    font-size: 1.1rem;
+    position: relative;
+}
+
+.nav-main .nav-social{
+    padding: 1.8rem 0;
+}
+
+.nav-main .nav-brand a {
+    font-size: 1.6rem;
+    padding: 1rem 0;
+    display: block;
+}
+
+.nav-social i{
+    padding: 0.4rem;
+}
+
+.nav-social i:hover{
+    color: #a1c4cf;
+}
+
+/* -------x-------- navbar ----------x------*/
+
+/*          Viewport less then or equal to 1000px       */
+
+@media only screen and (max-width: 1000px){
+    .nav-main .nav-menu, .nav-items{
+        flex-direction: column;!important;
+    }
+    .nav-main .toggle-collapse-nav{
+        display: initial;
+    }
+}
+
+
+/*          Viewport less then or equal to 750px       */
